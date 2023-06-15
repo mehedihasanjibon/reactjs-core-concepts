@@ -5,6 +5,13 @@ const number = 5555;
 const singer = {name: 'Dr.Mahfuz' , job: 'singer'}
 const singer2 = {name: 'Eva Rahman' , job: 'singer2'}
 
+const singers = [
+  {name: 'Dr.Mahfuz' , job: 'singer'},
+  {name: 'Eva Rahman' , job: 'singer2'},
+  {name: 'Agun' , job: 'sopno'},
+  {name: 'Shuvro' , job: 'pathor'}
+]
+
 
 const singerStyle = {
   color: "purple",
@@ -30,17 +37,26 @@ function App() {
         {
           nayoks.map(nayok => <li>{nayok}</li>)
         }
+        {/* {
+          nayoks.map(nayok => <Person name={nayok}></Person>)
+        } */}
 
-        <Person name={nayoks[0]} nayika="moushumi"></Person>
+        {
+          singers.map(singer => <Person name={singer.name}></Person>)
+        }
+
+        {/* <Person name={nayoks[0]} nayika="moushumi"></Person>
         <Person name={nayoks[1]} nayika="cheka"></Person>
-        <Person name={nayoks[2]} nayika="kopila"></Person>
+        <Person name={nayoks[2]} nayika="kopila"></Person> */}
+        <h5> New component. YAY </h5>
+        <p> Rock mama React mama. </p>
 
     </div>
   );
 }
 
 function Person (props){
-  console.log(props);
+  // console.log(props);
   return (
     <div className='person'>
       {/* <h1> Sakib Al Hasan </h1> */}
