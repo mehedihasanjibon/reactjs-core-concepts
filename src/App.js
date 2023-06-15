@@ -12,6 +12,7 @@ const singerStyle = {
 }
 
 function App() {
+  const nayoks = ['Rubel', 'BappaRaz', 'Kuber' , 'salman Shah' , 'Riyaz', 'Razzak' , 'Anwer']
   return (
     <div className="App">
 
@@ -26,8 +27,28 @@ function App() {
           <p style={{color: 'blue' , backgroundColor: 'yellow'}}> Name: {singer2.name} {singer2.job}</p>
         </div>
 
+        {
+          nayoks.map(nayok => <li>{nayok}</li>)
+        }
+
+        <Person name={nayoks[0]} nayika="moushumi"></Person>
+        <Person name={nayoks[1]} nayika="cheka"></Person>
+        <Person name={nayoks[2]} nayika="kopila"></Person>
+
     </div>
   );
+}
+
+function Person (props){
+  console.log(props);
+  return (
+    <div className='person'>
+      {/* <h1> Sakib Al Hasan </h1> */}
+      <h1> {props.name}</h1>
+      {/* <p> Profession: Cricket </p> */}
+      {/* <p> Nayika; {props.nayika}</p> */}
+    </div>
+  )
 }
 
 export default App;
